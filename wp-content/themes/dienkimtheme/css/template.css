@@ -15,7 +15,7 @@
 @font-face{font-family:"arial";src:url("../fonts/arial.ttf");}
 @font-face{font-family:"notoserif";src:url("../fonts/noto-serif.ttf");}
 @font-face{font-family:"baomoi";src:url("../fonts/baomoi_gdi.ttf");}
-body{font-size:13px;color:#333;background: #f1f1f1}
+body{font-size:13px;color:#333;background:#ffffff}
 table{max-width:100%;}
 p{margin:1em 0;}
 img{max-width:100%;}

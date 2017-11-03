@@ -64,119 +64,55 @@ $instagram_url=$zendvn_sp_settings['instagram_url'];
 $pinterest_url=$zendvn_sp_settings['pinterest_url'];     
 $quantity=0; 
 if(count($arrCart) > 0){
-foreach($arrCart as $cart){    
-    $quantity+=(int)$cart['product_quantity'];
-}
+    foreach($arrCart as $cart){    
+        $quantity+=(int)$cart['product_quantity'];
+    }
 }
 ?>    
 <header class="header">
-    <div class="top-header">
-        <div class="container">
-            <div class="col-lg-2 no-padding"><font color="#ffffff">Tư vấn 24/7:</font>&nbsp;<font color="#bbb"><?php echo $contacted_phone; ?></font></div>
-            <div class="col-lg-6 no-padding"><font color="#ffffff">Địa chỉ:</font>&nbsp;<font color="#bbb"><?php echo $address; ?></font></div>
-            <div class="col-lg-4 no-padding">
-                    <div class="col-lg-9 no-padding">
-                        <ul class="top-user">
-                        <?php                                                              
-                        if(empty($arrUser)){
-                            ?>
-                            <li><a href="<?php echo $register_member_link; ?>" class="header-action-item"><i class="fa fa-unlock" aria-hidden="true"></i>&nbsp;Đăng ký</a></li>
-                            <li><a href="<?php echo $account_link; ?>" class="header-action-item"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Đăng nhập</a></li>
-                            <?php
-                        }else{                                     
-                            ?>
-                            <li><a class="header-action-item" href="<?php echo $account_link; ?>"><?php echo $arrUser["username"]; ?></a></li>
-                            <li><a class="header-action-item" href="<?php echo $security_link; ?>">Đổi mật khẩu</a></li>                                
-                            <li><a class="header-action-item" href="<?php echo $history_link; ?>">Invoice</a></li>
-                            <li><a class="header-action-item" href="<?php echo site_url() . "/index.php?action=logout"; ?>">Logout</a></li>
-                            <?php                                     
-                        }
-                        ?>       
-                        </ul> 
-                    </div>                    
-                    <div class="col-lg-3 no-padding">
-                        <div class="mini-cart dropdown box-cart cart hidden-xs">
-                            <a href="<?php echo $cart_link; ?>" >
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Giỏ hàng
-                                <span class="cart-total"><?php echo $quantity; ?></span>
-                            </a>                            
-                        </div>
-                    </div>
-                    <div class="clr"></div>             
-            </div>            
+    <div class="container">
+        <div class="col-lg-12 no-padding">
+            <?php     
+            $args = array( 
+                'menu'              => '', 
+                'container'         => '', 
+                'container_class'   => '', 
+                'container_id'      => '', 
+                'menu_class'        => 'topmenu', 
+                'menu_id'           => 'top-menu', 
+                'echo'              => true, 
+                'fallback_cb'       => 'wp_page_menu', 
+                'before'            => '', 
+                'after'             => '', 
+                'link_before'       => '', 
+                'link_after'        => '', 
+                'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
+                'depth'             => 3, 
+                'walker'            => '', 
+                'theme_location'    => 'top-menu' 
+            );
+            wp_nav_menu($args);
+            ?>          
         </div>
     </div>
-<div class="bg-header">
-    <div class="container">        
-        <div class="menu">
-            <div class="col-lg-3 no-padding">                
-                <center><a href="<?php echo home_url(); ?>">                
-                    <img src="<?php echo $customizerGlobal->general_section('site-logo');?>" />
-                </a></center>
-            </div>
-            <div class="col-lg-6 no-padding">                
-                <div id="smoothmainmenu" class="ddsmoothmenu">
-                    <?php     
-                    $args = array( 
-                        'menu'              => '', 
-                        'container'         => '', 
-                        'container_class'   => '', 
-                        'container_id'      => '', 
-                        'menu_class'        => 'mainmenu', 
-                        'menu_id'           => 'main-menu', 
-                        'echo'              => true, 
-                        'fallback_cb'       => 'wp_page_menu', 
-                        'before'            => '', 
-                        'after'             => '', 
-                        'link_before'       => '', 
-                        'link_after'        => '', 
-                        'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
-                        'depth'             => 3, 
-                        'walker'            => '', 
-                        'theme_location'    => 'main-menu' 
-                    );
-                    wp_nav_menu($args);
-                    ?>                
-                </div>                
-            </div>
-            <div class="col-lg-3 no-padding">
-                <div class="desktop-box-search">                    
-                    <div class="box-search">
-                        <form action="<?php echo $search_link; ?>" method="get">
-                            <input type="text" name="q" autocomplete="off" placeholder="Tìm kiếm sản phẩm" value="">
-                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </form>
-                        <div class="clr"></div>
-                    </div>
-                    <div class="clr"></div>
-                </div>       
-            </div>      
-            <div class="clr"></div>      
-        </div>      
-    </div>    
-</div>   
-<div class="mobilemenu">
-    <div class="container">
-        <div>
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>                   
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
+    <div class="bg-header">
+        <div class="container">        
+            <div class="menu">
+                <div class="col-lg-3 no-padding">                
+                    <center><a href="<?php echo home_url(); ?>">                
+                        <img src="<?php echo $customizerGlobal->general_section('site-logo');?>" />
+                    </a></center>
+                </div>
+                <div class="col-lg-6 no-padding">                
+                    <div id="smoothmainmenu" class="ddsmoothmenu">
                         <?php     
                         $args = array( 
                             'menu'              => '', 
                             'container'         => '', 
                             'container_class'   => '', 
                             'container_id'      => '', 
-                            'menu_class'        => 'nav navbar-nav', 
-                            'menu_id'           => 'mobile-menu', 
+                            'menu_class'        => 'mainmenu', 
+                            'menu_id'           => 'main-menu', 
                             'echo'              => true, 
                             'fallback_cb'       => 'wp_page_menu', 
                             'before'            => '', 
@@ -186,26 +122,69 @@ foreach($arrCart as $cart){
                             'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
                             'depth'             => 3, 
                             'walker'            => '', 
-                            'theme_location'    => 'mobile-menu' 
+                            'theme_location'    => 'main-menu' 
                         );
                         wp_nav_menu($args);
-                        ?>             
-                    </div>
+                        ?>                
+                    </div>                
                 </div>
-            </nav>
+                <div class="col-lg-3 no-padding">
+                    <div class="desktop-box-search">                    
+                        <div class="box-search">
+                            <form action="<?php echo $search_link; ?>" method="get">
+                                <input type="text" name="q" autocomplete="off" placeholder="Tìm kiếm sản phẩm" value="">
+                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </form>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="clr"></div>
+                    </div>       
+                </div>      
+                <div class="clr"></div>      
+            </div>      
+        </div>    
+    </div>   
+    <div class="mobilemenu">
+        <div class="container">
+            <div>
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>                   
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <?php     
+                            $args = array( 
+                                'menu'              => '', 
+                                'container'         => '', 
+                                'container_class'   => '', 
+                                'container_id'      => '', 
+                                'menu_class'        => 'nav navbar-nav', 
+                                'menu_id'           => 'mobile-menu', 
+                                'echo'              => true, 
+                                'fallback_cb'       => 'wp_page_menu', 
+                                'before'            => '', 
+                                'after'             => '', 
+                                'link_before'       => '', 
+                                'link_after'        => '', 
+                                'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
+                                'depth'             => 3, 
+                                'walker'            => '', 
+                                'theme_location'    => 'mobile-menu' 
+                            );
+                            wp_nav_menu($args);
+                            ?>             
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
     </div>
-</div>
-<!--<div class="mobile-search">                    
-                    <div class="box-search">
-                        <form action="<?php echo $search_link; ?>" method="get">
-                            <input type="text" name="q" autocomplete="off" placeholder="Tìm kiếm sản phẩm" value="">
-                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </form>
-                        <div class="clr"></div>
-                    </div>
-                    <div class="clr"></div>
-                </div>   
-</header>-->
+</header>
 
 

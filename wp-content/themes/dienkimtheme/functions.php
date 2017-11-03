@@ -24,7 +24,8 @@ function zendvn_theme_register_menus(){
 			'about-us-menu' 			=> __('Tại sao chọn chúng tôi'),		
 			'category-article-menu' => __('Danh mục bài viết'),	
 			'category-product-menu' => __('Danh mục sản phẩm'),			
-			'bottom-menu' => __('Bottom menu'),			
+			'bottom-menu' => __('Bottom menu'),	
+			'top-menu' => __('Top menu'),			
 		)
 	);
 }
