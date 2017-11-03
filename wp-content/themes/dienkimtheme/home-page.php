@@ -41,140 +41,187 @@ $pinterest_url=$zendvn_sp_settings['pinterest_url'];
         <?php dynamic_sidebar('featured-article-widget')?>
         <?php endif; ?>    
     </div>    
-    <div class="container main">
-        <div class="header-title">
-            <h4><span><font color="#3AB54A">Danh mục</font></span> sản phẩm</h4>               
-        </div>        
+    <div class="container main margin-top-15">
+        <h2 class="title-box-news"><a class="text-title-box" title="" href="/cong-trinh-tieu-bieu/">Công trình tiêu biểu</a></h2>     
         <div class="margin-top-15 product-kemma">            
-            <div>                
-                <div class="cate-product-horizontal-right">
-                    <?php     
-                    $args = array( 
-                        'menu'              => '', 
-                        'container'         => '', 
-                        'container_class'   => '', 
-                        'container_id'      => '', 
-                        'menu_class'        => 'cateprodhorizontalright', 
-                        'menu_id'           => 'cate-prod-horizontal-right', 
-                        'echo'              => true, 
-                        'fallback_cb'       => 'wp_page_menu', 
-                        'before'            => '', 
-                        'link_before'       => '<i class="fa fa-angle-double-right" aria-hidden="true"></i>&nbsp;&nbsp;', 
-                        'after'             => '', 
-                        'link_after'        => '<i class="fa fa-caret-down pull-right" aria-hidden="true"></i>', 
-                        'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
-                        'depth'             => 3, 
-                        'walker'            => '', 
-                        'theme_location'    => 'rau-sach-menu' 
-                    );
-                    wp_nav_menu($args);
-                    ?>    
-                    <div class="clr"></div>                                    
-                </div>
-                <div class="margin-top-15"><center><img  src="<?php echo site_url( '/wp-content/uploads/noi-that-sang-trong.jpg',null ); ?>" /></center></div>                
+            <script type="text/javascript" language="javascript">
+                jQuery(document).ready(function(){
+                    jQuery("div.tab-power > div:nth-child(2)").show();
+                    jQuery("div.tab-power > div.tab > div > div:first-child > button").addClass('active');
+                });
+                function openCity(evt, cityName) {    
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }   
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }   
+                    document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                }
+            </script>
+            <div class="room-dimention">
+                               
+                    <div class="tab-power">                
+                        <div class="tab">                    
+                            <div class="javapec">
+                                <div class="tab-instruction"><button class="tablinks h-title" onclick="openCity(event, 'chung-cu')">Chung cư</button></div>
+                                <div class="tab-instruction"><button class="tablinks h-title" onclick="openCity(event, 'biet-thu')">Biệt thự</button></div>
+                                <div class="tab-instruction"><button class="tablinks h-title" onclick="openCity(event, 'khach-san')">Khách sạn</button></div>
+                                <div class="tab-instruction"><button class="tablinks h-title" onclick="openCity(event, 'nha-lien-ke')">Nhà liền kề</button></div>
+                                <div class="tab-instruction"><button class="tablinks h-title" onclick="openCity(event, 'nha-pho')">Nhà phố</button></div>
+                                <div class="tab-instruction"><button class="tablinks h-title" onclick="openCity(event, 'van-phong')">Văn phòng</button></div>
+                                <div class="tab-instruction"><button class="tablinks h-title" onclick="openCity(event, 'phong-khach')">P. Khách</button></div>
+                                <div class="tab-instruction"><button class="tablinks h-title" onclick="openCity(event, 'phong-ngu')">P. Ngủ</button></div>
+                                <div class="tab-instruction"><button class="tablinks h-title" onclick="openCity(event, 'phong-bep')">P. Bếp</button></div>
+                                <div class="tab-instruction"><button class="tablinks h-title" onclick="openCity(event, 'phong-an')">P. Ăn</button></div>
+                                <div class="tab-instruction"><button class="tablinks h-title" onclick="openCity(event, 'phong-tre-em')">P. Trẻ em</button></div>                                    
+                                <div class="clr"></div>                                  
+                            </div>                                                
+                        </div>
+                        <div id="chung-cu" class="tabcontent">
+                            <?php if(is_active_sidebar('chung-cu-widget')):?>
+                                <?php dynamic_sidebar('chung-cu-widget')?>
+                            <?php endif; ?>        
+                        </div>
+                        <div id="biet-thu" class="tabcontent">
+                            <?php if(is_active_sidebar('biet-thu-widget')):?>
+                                <?php dynamic_sidebar('biet-thu-widget')?>
+                            <?php endif; ?>  
+                        </div> 
+                        <div id="khach-san" class="tabcontent">
+                            <?php if(is_active_sidebar('khach-san-widget')):?>
+                                <?php dynamic_sidebar('khach-san-widget')?>
+                            <?php endif; ?>  
+                        </div>
+                        <div id="nha-lien-ke" class="tabcontent">
+                            <?php if(is_active_sidebar('nha-lien-ke-widget')):?>
+                                <?php dynamic_sidebar('nha-lien-ke-widget')?>
+                            <?php endif; ?>  
+                        </div>
+                        <div id="nha-pho" class="tabcontent">
+                            <?php if(is_active_sidebar('nha-pho-widget')):?>
+                                <?php dynamic_sidebar('nha-pho-widget')?>
+                            <?php endif; ?>  
+                        </div>
+                        <div id="van-phong" class="tabcontent">
+                            <?php if(is_active_sidebar('van-phong-widget')):?>
+                                <?php dynamic_sidebar('van-phongh-widget')?>
+                            <?php endif; ?>  
+                        </div>
+                        <div id="phong-khach" class="tabcontent">
+                            <?php if(is_active_sidebar('phong-khach-widget')):?>
+                                <?php dynamic_sidebar('phong-khach-widget')?>
+                            <?php endif; ?>  
+                        </div>
+                        <div id="phong-ngu" class="tabcontent">
+                            <?php if(is_active_sidebar('phong-ngu-widget')):?>
+                                <?php dynamic_sidebar('phong-ngu-widget')?>
+                            <?php endif; ?>  
+                        </div>
+                        <div id="phong-bep" class="tabcontent">
+                            <?php if(is_active_sidebar('phong-bep-widget')):?>
+                                <?php dynamic_sidebar('phong-bep-widget')?>
+                            <?php endif; ?>  
+                        </div>
+                        <div id="phong-an" class="tabcontent">
+                            <?php if(is_active_sidebar('phong-an-widget')):?>
+                                <?php dynamic_sidebar('phong-an-widget')?>
+                            <?php endif; ?>  
+                        </div>
+                        <div id="phong-tre-em" class="tabcontent">
+                            <?php if(is_active_sidebar('phong-tre-em-widget')):?>
+                                <?php dynamic_sidebar('phong-tre-em-widget')?>
+                            <?php endif; ?>  
+                        </div>  
+                    </div>
+               
             </div>
-            <div>                               
-                <?php if(is_active_sidebar('rau-sach-widget')):?>
-                    <?php dynamic_sidebar('rau-sach-widget')?>
-                <?php endif; ?>                    
-            </div>                    
-            <div class="clr"></div>   
-        </div>          
-        
-    </div>    
-    <div class="register-mail-bg margin-top-15">
-        <div class="container">            
-            <div class="col-lg-12 no-padding">
-                <h3 class="subscribe-label">
-                    <span>Đăng ký nhận</span>&nbsp;<span class="tu-van-mien-phi">tư vấn miễn phí</span>
-                </h3>
-                <div class="mail-subscribe">Bạn là khách hàng , lớn hay nhỏ, và muốn chúng tôi phục vụ , xin vui lòng gửi cho chúng tôi một</div>
-                <div class="mail-subscribe">email để support@megashop.com</div>
-                <div class="box-register-email margin-top-5">              
-                    <div class="subscribe-email">
-                        <form action="#" method="post"  name="mc-embedded-subscribe-form" target="_blank">
-                            <input type="email" value="" placeholder="Email của bạn" name="EMAIL" id="mail" aria-label="general.newsletter_form.newsletter_email">
-                            <button name="subscribe" id="subscribe">Gửi ngay</button>
-                        </form>
-                    </div>                                                                  
-                </div>
-            </div>
-            <div class="clr"></div>
+        </div>                  
+    </div>        
+    <div class="container main margin-top-15">
+        <h2 class="title-box-news"><a class="text-title-box" title="" href="/cong-trinh-tieu-bieu/">Thiết kế nội thất phòng</a></h2>     
+        <div class="margin-top-15">
+            <?php if(is_active_sidebar('thiet-ke-noi-that-phong-widget')):?>
+                <?php dynamic_sidebar('thiet-ke-noi-that-phong-widget')?>
+            <?php endif; ?> 
         </div>
-    </div>     
-    <?php if(is_active_sidebar('customer-widget')):?>
-                    <?php dynamic_sidebar('customer-widget')?>
-    <?php endif; ?> 
-    <div class="cleverhouse padding-bottom-15">
-        <div class="container">
-            <div class="header-title">
-                <h4><span><font color="#3AB54A">Tin</font></span>&nbsp;mới</h4>                          
-            </div>  
-            <div class="margin-top-15">
-                <?php if(is_active_sidebar('hot-news-widget')):?>
-                    <?php dynamic_sidebar('hot-news-widget')?>
-                <?php endif; ?>  
-            </div>
-        </div>   
-    </div>     
-    <div class="cleverhouse padding-bottom-15">
-        <div class="container">
-            <div class="header-title">
-                <h4><span><font color="#3AB54A">Đối</font></span>&nbsp;tác</h4>                          
-            </div>  
-            <div class="margin-top-15">
+    </div>
+    <div class="container main margin-top-15">
+        <h2 class="title-box-news"><a class="text-title-box" title="" href="/cong-trinh-tieu-bieu/">Thi công nội thất</a></h2>     
+        <div class="margin-top-15">
+            <?php if(is_active_sidebar('thi-cong-noi-that-widget')):?>
+                <?php dynamic_sidebar('thi-cong-noi-that-widget')?>
+            <?php endif; ?> 
+        </div>
+    </div>
+    <div class="container main margin-top-15">
+        <h2 class="title-box-news"><a class="text-title-box" title="" href="/cong-trinh-tieu-bieu/">Kiến thức nhà đẹp</a></h2>     
+        <div class="margin-top-15">
+            <?php if(is_active_sidebar('kien-thuc-nha-dep-widget')):?>
+                <?php dynamic_sidebar('kien-thuc-nha-dep-widget')?>
+            <?php endif; ?> 
+        </div>
+    </div>
+    <div class="container margin-top-15">
+            <h2 class="title-box-news"><a class="text-title-box" title="" href="/cong-trinh-tieu-bieu/">Đối tác</a></h2>     
+           
                 <?php if(is_active_sidebar('partner-widget')):?>
                     <?php dynamic_sidebar('partner-widget')?>
                 <?php endif; ?>  
-            </div>
+           
         </div>   
-    </div>  
-    <?php if(is_active_sidebar('map-widget')):?>
-                    <?php dynamic_sidebar('map-widget')?>
-    <?php endif; ?>      
-    <div class="cleverhouse padding-bottom-15 padding-top-15">
-        <div class="container">
-            <div class="col-lg-4 no-padding">
-                <div>
-                    <div class="col-lg-3 no-padding"><center><span class="follow-us">Follow us</span></center></div>
-                    <div class="col-lg-9 no-padding">
-                        <div class="warasocial"><ul class="social-block ">
-                            <li class="facebook"><a class="_blank" href="<?php echo $facebook_url; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li class="twitter"><a class="_blank" href="<?php echo $twitter_url; ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li class="rss"><a class="_blank" href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
-                            <li class="google_plus"><a class="_blank" href="<?php echo $google_plus; ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                            <li class="pinterest"><a class="_blank" href="<?php echo $pinterest_url; ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                        </ul></div>                        
-                    </div>
-                </div>                
+    
+        <div class="cleverhouse">
+            <div class="container">
+                <div class="col-lg-4 no-padding">
+                    <div class="padding-top-5 padding-bottom-5">
+                        <div class="col-lg-3 no-padding"><center><span class="follow-us">Follow us</span></center></div>
+                        <div class="col-lg-9 no-padding">
+                            <div class="warasocial"><ul class="social-block ">
+                                <li class="facebook"><a class="_blank" href="<?php echo $facebook_url; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li class="twitter"><a class="_blank" href="<?php echo $twitter_url; ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li class="rss"><a class="_blank" href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                <li class="google_plus"><a class="_blank" href="<?php echo $google_plus; ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                <li class="pinterest"><a class="_blank" href="<?php echo $pinterest_url; ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                            </ul></div>                        
+                        </div>
+                        <div class="clr"></div>       
+                    </div>                
+                </div>
+                <div class="col-lg-8 no-padding-right">
+                    <div class="menu-bottom">
+                        <?php     
+                        $args = array( 
+                            'menu'              => '', 
+                            'container'         => '', 
+                            'container_class'   => '', 
+                            'container_id'      => '', 
+                            'menu_class'        => 'bottommenu', 
+                            'menu_id'           => 'bottom-menu', 
+                            'echo'              => true, 
+                            'fallback_cb'       => 'wp_page_menu', 
+                            'before'            => '', 
+                            'after'             => '', 
+                            'link_before'       => '', 
+                            'link_after'        => '', 
+                            'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
+                            'depth'             => 3, 
+                            'walker'            => '', 
+                            'theme_location'    => 'bottom-menu' 
+                        );
+                        wp_nav_menu($args);
+                        ?>         
+                    </div>   
+                    <div class="clr"></div>             
+                </div>
+                <div class="clr"></div>       
             </div>
-            <div class="col-lg-8 no-padding-right">
-                <div class="menu-bottom">
-                    <?php     
-                    $args = array( 
-                        'menu'              => '', 
-                        'container'         => '', 
-                        'container_class'   => '', 
-                        'container_id'      => '', 
-                        'menu_class'        => 'bottommenu', 
-                        'menu_id'           => 'bottom-menu', 
-                        'echo'              => true, 
-                        'fallback_cb'       => 'wp_page_menu', 
-                        'before'            => '', 
-                        'after'             => '', 
-                        'link_before'       => '', 
-                        'link_after'        => '', 
-                        'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
-                        'depth'             => 3, 
-                        'walker'            => '', 
-                        'theme_location'    => 'bottom-menu' 
-                    );
-                    wp_nav_menu($args);
-                    ?>         
-                </div>                
-            </div>
+            <div class="clr"></div>       
         </div>
-    </div>
     <?php get_footer(); ?>
     <?php wp_footer();?>
 </body>

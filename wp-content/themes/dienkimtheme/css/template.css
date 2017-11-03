@@ -341,9 +341,7 @@ div.box-product{
  
   padding: 0px 15px;
 }
-div.tabcontent div.box-product{
-    border-bottom: 1px solid #dddddd;
-}
+
 a.xem-tat-ca{
     color: #fff;
     background-color: #a0cb00;
@@ -406,13 +404,9 @@ div.category-list-index > div > ul > li > a{
         padding: 5px 0px 5px 10px;
     display: block;
 }
-div.product-kemma > div:first-child{
-    float: left;
-    width: 272px;
-}
-div.product-kemma > div:nth-child(2){
-        float: right;
-    width: 880px;
+div.tab-instruction{
+        float: left;
+    margin-left: 10px;
 }
 h2.top-sales-header{
         text-transform: uppercase;
@@ -925,7 +919,7 @@ div.box-product-add-to-cart{
     display: none;
 }
 div.cleverhouse{
-    background: #ffffff
+    background:#05715f
 }
 div.twitter{
     background: url('../images/twitter-bg.jpg');
@@ -999,6 +993,7 @@ span.follow-us{
     height: 30px;
     line-height: 30px;
     font-size: 18px;
+    color: #ffffff;
 }
 ul.social-block{
     list-style: none;
@@ -1048,9 +1043,10 @@ ul.bottommenu > li{
 ul.bottommenu > li > a{
         font-family: 'baomoi';
     font-size: 16px;
-    border-right: 1px dotted #000000;
-    padding: 0px 10px;
+    border-right:solid 1px #288575;
+    padding: 10px 10px;
     display: block;
+    color: #ffffff
 }
 ul.footermenu > li {
     margin-left: 0
@@ -1134,10 +1130,35 @@ div.amazon{
     min-height: 360px;
     padding: 40px 385px 0px 40px;
 }
+.title-box-news {   
+    text-align: left;
+    background-image: url('../images/bg-hd.png');
+    background-repeat: repeat-x;
+    background-position: center;
+}
+.title-box-news a {
+    display: inline-block;
+    color: #2c2c2c;
+    font-size: 24px;    
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 10px;
+    background-image: url('../images/bg-hd1.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 55px;    
+    line-height: 50px;
+    background-color: #fff;
+    font-family: 'baomoi'
+}
 div.featured-img-absolute{
     position: absolute;
     right: 0;
     bottom: 0;
+}
+div.gechome{
+    background: #EDEDED;
+    padding: 10px
 }
 @media (max-width: 1199px){
     div.phone-number > div{

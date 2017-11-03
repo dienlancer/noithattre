@@ -20,7 +20,8 @@ if(!empty($instance['item_id'])){
 	if(count($arrItemID) > 0){
 		if($instance["status"]=='active'){		
 			switch ($instance["position"]) {				
-				case "featured-article-widget":					
+				case "featured-article-widget":
+
 				$args = array(
 					'post__in' => $arrItemID,
 					'post_type' => 'page'
@@ -113,7 +114,7 @@ if(!empty($instance['item_id'])){
 						})
 					});                
 				</script>
-				<div class="margin-top-15">
+				<div class="margin-top-15 gechome">
 					<section class="slider">
 						<div class="owl-carousel owl-carousel-partner owl-theme">
 							<?php
@@ -490,7 +491,21 @@ if(!empty($instance['item_id'])){
 				wp_reset_postdata();  
 			}			
 			break;	
-			case "thiet-bi-ve-sinh-widget":					
+			case "thiet-bi-ve-sinh-widget":		
+			case "chung-cu-widget":					
+			case "biet-thu-widget":					
+			case "khach-san-widget":					
+			case "nha-lien-ke-widget":					
+			case "nha-pho-widget":					
+			case "van-phong-widget":					
+			case "phong-khach-widget":					
+			case "phong-ngu-widget":					
+			case "phong-bep-widget":					
+			case "phong-an-widget":					
+			case "phong-tre-em-widget":		
+			case "thiet-ke-noi-that-phong-widget":
+			case "thi-cong-noi-that-widget":
+			case "kien-thuc-nha-dep-widget":						
 			?>
 			<script type="text/javascript" language="javascript">
 				jQuery(document).ready(function(){

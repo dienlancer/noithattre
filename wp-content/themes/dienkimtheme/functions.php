@@ -276,6 +276,133 @@ function zendvn_theme_widgets_init(){
 		'after_title'   => '</h3>',
 		'after_widget'  => '</div>'				
 	));		
+
+	register_sidebar(array(
+		'name'          => __( 'ChungCuWidget', $themeName ),
+		'id'            => 'chung-cu-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'BietThuWidget', $themeName ),
+		'id'            => 'biet-thu-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'KhachSanWidget', $themeName ),
+		'id'            => 'khach-san-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'NhaLienKeWidget', $themeName ),
+		'id'            => 'nha-lien-ke-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'NhaPhoWidget', $themeName ),
+		'id'            => 'nha-pho-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'VanPhongWidget', $themeName ),
+		'id'            => 'van-phong-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'PhongKhachWidget', $themeName ),
+		'id'            => 'phong-khach-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'PhongNguWidget', $themeName ),
+		'id'            => 'phong-ngu-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'PhongBepWidget', $themeName ),
+		'id'            => 'phong-bep-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'PhongAnWidget', $themeName ),
+		'id'            => 'phong-an-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'PhongTreEmWidget', $themeName ),
+		'id'            => 'phong-tre-em-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'ThietKeNoiThatPhongWidget', $themeName ),
+		'id'            => 'thiet-ke-noi-that-phong-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'ThiCongNoiThatWidget', $themeName ),
+		'id'            => 'thi-cong-noi-that-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
+		'name'          => __( 'KienThucNhaDepWidget', $themeName ),
+		'id'            => 'kien-thuc-nha-dep-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
 }
 add_action("wp_enqueue_scripts",function(){
 	wp_deregister_script("jquery");
