@@ -25,13 +25,13 @@ margin-left: 0;
 .ddsmoothmenu ul li a{
     display: block;
     background: transparent;
-    padding: 14px 20px;
+    padding: 14px 15px;
     border-right: solid 1px #288575;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'baomoi';
-    font-size: 15px;
+    font-size: 12px;
 }
 .ddsmoothmenu ul > li{
   background: transparent;
@@ -61,7 +61,7 @@ display: none; /*collapse all sub menus to begin with*/
 visibility: hidden;
 background: #05715f;
 width: 200px !important;
-top: 46px !important;
+top: 43px !important;
 }
 
 /*Sub level menu list items (alters style from Top level List Items)*/
@@ -79,15 +79,15 @@ top: 0;
 }
 /* Sub level menu links style */
 .ddsmoothmenu ul li ul li a{
-        font-size: 15px;
+        font-size: 12px;
     width: 100%;
     padding: 10px 0px 10px 10px;
     margin: 0;
-    border-bottom: 1px solid #dddddd;
+    border-bottom:solid 1px #288575;
     font-family: 'robotocondensed';
     display: block;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
+    border-left: solid 1px #288575;
+    border-right: solid 1px #288575;
     text-transform: capitalize;
     font-weight: normal;
 }

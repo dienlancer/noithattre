@@ -109,7 +109,7 @@ $pinterest_url=$zendvn_sp_settings['pinterest_url'];
                         </div>
                         <div id="van-phong" class="tabcontent">
                             <?php if(is_active_sidebar('van-phong-widget')):?>
-                                <?php dynamic_sidebar('van-phongh-widget')?>
+                                <?php dynamic_sidebar('van-phong-widget')?>
                             <?php endif; ?>  
                         </div>
                         <div id="phong-khach" class="tabcontent">
