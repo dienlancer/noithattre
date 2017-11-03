@@ -3,7 +3,7 @@ font: bold 12px Verdana;
 background: transparent; /*background of menu bar (default state)*/
 width: 100%;
 display: none;
-margin: 15px 0px 0px 0px
+margin: 0px 0px 0px 0px
 }
 
 .ddsmoothmenu ul{
@@ -25,9 +25,9 @@ margin-left: 0;
 .ddsmoothmenu ul li a{
     display: block;
     background: transparent;
-    padding: 0px 20px;
-    border-right: 1px dashed #7c7c7c;
-    color: #333333;
+    padding: 14px 20px;
+    border-right: solid 1px #288575;
+    color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'baomoi';
@@ -50,7 +50,7 @@ color:#F86B47;
 
 .ddsmoothmenu ul li a:hover{
 background: transparent; /*background of menu items during onmouseover (hover state)*/
-color: #3AB54A;
+color:#F86B47;
 }
 	
 /* sub menus */
@@ -59,9 +59,9 @@ position: absolute;
 left: -3000px;
 display: none; /*collapse all sub menus to begin with*/
 visibility: hidden;
-background: #ffffff;
+background: #05715f;
 width: 200px !important;
-top: 40px !important;
+top: 46px !important;
 }
 
 /*Sub level menu list items (alters style from Top level List Items)*/
@@ -74,7 +74,9 @@ float: none;
 .ddsmoothmenu ul li ul li ul{
 top: 0;
 }
-
+.ddsmoothmenu ul li ul li a:hover{
+  background: #0c7c69
+}
 /* Sub level menu links style */
 .ddsmoothmenu ul li ul li a{
         font-size: 15px;
@@ -90,7 +92,8 @@ top: 0;
     font-weight: normal;
 }
 .ddsmoothmenu > ul > li.current-menu-item > a{
-  color:#3AB54A;
+  color:#353434;
+  background: #ffffff
 }
 .ddsmoothmenu > ul > li > ul > li.current-menu-item > a{
   color: #3AB54A;

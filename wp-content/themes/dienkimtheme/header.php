@@ -72,78 +72,78 @@ if(count($arrCart) > 0){
 <header class="header">
     <div class="container">
         <div class="col-lg-12 no-padding">
-            <?php     
-            $args = array( 
-                'menu'              => '', 
-                'container'         => '', 
-                'container_class'   => '', 
-                'container_id'      => '', 
-                'menu_class'        => 'topmenu', 
-                'menu_id'           => 'top-menu', 
-                'echo'              => true, 
-                'fallback_cb'       => 'wp_page_menu', 
-                'before'            => '', 
-                'after'             => '', 
-                'link_before'       => '', 
-                'link_after'        => '', 
-                'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
-                'depth'             => 3, 
-                'walker'            => '', 
-                'theme_location'    => 'top-menu' 
-            );
-            wp_nav_menu($args);
-            ?>          
+            <div class="top-menu-wrapper">
+                <?php     
+                $args = array( 
+                    'menu'              => '', 
+                    'container'         => '', 
+                    'container_class'   => '', 
+                    'container_id'      => '', 
+                    'menu_class'        => 'topmenu', 
+                    'menu_id'           => 'top-menu', 
+                    'echo'              => true, 
+                    'fallback_cb'       => 'wp_page_menu', 
+                    'before'            => '', 
+                    'after'             => '', 
+                    'link_before'       => '', 
+                    'link_after'        => '', 
+                    'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
+                    'depth'             => 3, 
+                    'walker'            => '', 
+                    'theme_location'    => 'top-menu' 
+                );
+                wp_nav_menu($args);
+                ?>
+            </div>                    
         </div>
     </div>
     <div class="bg-header">
         <div class="container">        
-            <div class="menu">
-                <div class="col-lg-3 no-padding">                
-                    <center><a href="<?php echo home_url(); ?>">                
+            
+                <div class="col-lg-10 no-padding">                
+                    <a href="<?php echo home_url(); ?>">                
                         <img src="<?php echo $customizerGlobal->general_section('site-logo');?>" />
-                    </a></center>
-                </div>
-                <div class="col-lg-6 no-padding">                
-                    <div id="smoothmainmenu" class="ddsmoothmenu">
-                        <?php     
-                        $args = array( 
-                            'menu'              => '', 
-                            'container'         => '', 
-                            'container_class'   => '', 
-                            'container_id'      => '', 
-                            'menu_class'        => 'mainmenu', 
-                            'menu_id'           => 'main-menu', 
-                            'echo'              => true, 
-                            'fallback_cb'       => 'wp_page_menu', 
-                            'before'            => '', 
-                            'after'             => '', 
-                            'link_before'       => '', 
-                            'link_after'        => '', 
-                            'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
-                            'depth'             => 3, 
-                            'walker'            => '', 
-                            'theme_location'    => 'main-menu' 
-                        );
-                        wp_nav_menu($args);
-                        ?>                
-                    </div>                
-                </div>
-                <div class="col-lg-3 no-padding">
-                    <div class="desktop-box-search">                    
-                        <div class="box-search">
-                            <form action="<?php echo $search_link; ?>" method="get">
-                                <input type="text" name="q" autocomplete="off" placeholder="Tìm kiếm sản phẩm" value="">
-                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                            </form>
-                            <div class="clr"></div>
-                        </div>
-                        <div class="clr"></div>
-                    </div>       
+                    </a>
+                </div>                
+                <div class="col-lg-2 no-padding">
+                    <div class="hotline">
+                        <span>Hotline:</span>
+                        <span><?php echo $contacted_phone; ?></span>
+                    </div>
                 </div>      
                 <div class="clr"></div>      
-            </div>      
+           
         </div>    
     </div>   
+    <div class="main-menu-wrapper">
+        <div class="container">
+            <div id="smoothmainmenu" class="ddsmoothmenu">
+                <?php     
+                $args = array( 
+                    'menu'              => '', 
+                    'container'         => '', 
+                    'container_class'   => '', 
+                    'container_id'      => '', 
+                    'menu_class'        => 'mainmenu', 
+                    'menu_id'           => 'main-menu', 
+                    'echo'              => true, 
+                    'fallback_cb'       => 'wp_page_menu', 
+                    'before'            => '', 
+                    'after'             => '', 
+                    'link_before'       => '', 
+                    'link_after'        => '', 
+                    'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',  
+                    'depth'             => 3, 
+                    'walker'            => '', 
+                    'theme_location'    => 'main-menu' 
+                );
+                wp_nav_menu($args);
+                ?>   
+                <div class="clr"></div>
+            </div>   
+            <div class="clr"></div>             
+        </div>        
+    </div>
     <div class="mobilemenu">
         <div class="container">
             <div>

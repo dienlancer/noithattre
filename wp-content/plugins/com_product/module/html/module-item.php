@@ -461,16 +461,14 @@ if(!empty($instance['item_id'])){
 				wp_reset_postdata();  
 			}			
 			break;	
-			case "thiet-bi-ve-sinh-widget":		
-			case "thiet-bi-bep-widget":	
-			case "clever-house-widget":		
+			case "thiet-bi-ve-sinh-widget":					
 			?>
 			<script type="text/javascript" language="javascript">
 				jQuery(document).ready(function(){
 					jQuery(".owl-carousel-equipment").owlCarousel({
 						autoplay:false,                    
 						loop:true,
-						margin:10,                        
+						margin:0,                        
 						nav:true,                                            
 						responsiveClass:true,
 						responsive:{
@@ -495,7 +493,7 @@ if(!empty($instance['item_id'])){
 			<?php			
 			$args = array(
 				'post__in' => $arrItemID,
-				'post_type' => 'zaproduct'
+				'post_type' => 'post'
 			);					
 			$query = new WP_Query($args);		
 			if($query->have_posts()){
@@ -505,49 +503,22 @@ if(!empty($instance['item_id'])){
 					$query->the_post();		
 					$post_id=$query->post->ID;							
 					$permalink=get_the_permalink($post_id);
-					$title=get_the_title($post_id);
-					$excerpt=get_post_meta($post_id,$product_meta_key."intro",true);
+					$title=get_the_title($post_id);			
+					$excerpt=get_post_meta($post_id,$post_meta_key."intro",true);		
 					$featureImg=wp_get_attachment_url(get_post_thumbnail_id($post_id));
-					$featureImg=$vHtml->getFileName($featureImg);
-					$featureImg=$width.'x'.$height.'-'.$featureImg;                    
-					$featureImg=site_url( '/wp-content/uploads/'.$featureImg, null ) ; 
-					$price=get_post_meta( $post_id, $product_meta_key . 'price', true );
-					$sale_price=get_post_meta( $post_id, $product_meta_key . 'sale_price', true );        
-					$str_price='';
-					$sale_price_des='';
-					$regular_price='';
-					if(!empty($price)){						
-						$sale_price_des=$vHtml->fnPrice($price);								
-					}
-					if(!empty($sale_price)){				
-						$regular_price ='<span class="price-regular">'.$vHtml->fnPrice($price).' đ</span>';										
-						$sale_price_des=$vHtml->fnPrice($sale_price);						
-					}
-					$sale_price_des='<span class="price-sale">'.$sale_price_des. ' đ'.'</span>' ;					
-					$str_price=$regular_price . '&nbsp;&nbsp;' . $sale_price_des ;
+					$featureImg=$vHtml->getFileName($featureImg);					
+					$featureImg=site_url( '/wp-content/uploads/'.$featureImg, null ) ; 					
 					?>
-					<div>
-						<div class="box-product">
-							<div class="product-img"><center><figure><a href="<?php echo $permalink; ?>"><img src="<?php echo $featureImg; ?>" alt="" /></a></figure></center>
-								<div class="box-product-add-to-cart">
-									<div class="them-vao-gio-hang">
-									<a href="javascript:void(0)" data-toggle="modal" data-target="#modal-alert-add-cart" onclick="addToCart(<?php echo $post_id; ?>);" ><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Thêm vào giỏ</a>									
-									</div>
-								</div>								
-							</div>									
-							<div class="box-product-title"><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></div>
-							<div class="box-product-star">								
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>								
-							</div>
-							<div class="box-product-general-price margin-top-5">
-								<center><?php echo $str_price; ?></center>								                    
-							</div>							                     
-						</div>           
-					</div>					             				
+					
+					<div class="box-product">
+						<div class="product-img"><center><figure><a href="<?php echo $permalink; ?>"><img src="<?php echo $featureImg; ?>" alt="" /></a></figure></center>
+
+						</div>									
+						<div class="box-product-title margin-top-15"><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></div>				
+						<div class="margin-top-5 excerpt"><?php echo substr($excerpt, 0,100).'...'; ?></div>
+						<div class="readmore-left margin-top-5"><a href="<?php echo $permalink; ?>">Xem thêm...</a><div class="clr"></div></div>
+					</div>           
+									             				
 					<?php					
 				}
 				wp_reset_postdata();  

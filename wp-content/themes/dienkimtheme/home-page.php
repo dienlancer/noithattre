@@ -20,12 +20,21 @@ $instagram_url=$zendvn_sp_settings['instagram_url'];
 $pinterest_url=$zendvn_sp_settings['pinterest_url'];   
      ?>
      <?php get_header();     ?>
-     <div class="container">
-        <div class="margin-top-5">            
-            <?php if(is_active_sidebar('slideshow-widget')):?>
-                <?php dynamic_sidebar('slideshow-widget')?>
-            <?php endif; ?>              
-        </div>
+     <div class="container margin-top-15 free-coffee">
+         <div class="col-lg-3 no-padding"><div><center><img src="<?php echo site_url( '/wp-content/uploads/mien-phi-1.png', null ); ?>" /></center></div></div>
+         <div class="col-lg-3 no-padding"><div><center><img src="<?php echo site_url( '/wp-content/uploads/mien-phi-2.png', null ); ?>" /></center></div></div>
+         <div class="col-lg-3 no-padding"><div><center><img src="<?php echo site_url( '/wp-content/uploads/mien-phi-3.png', null ); ?>" /></center></div></div>
+         <div class="col-lg-3 no-padding"><div><center><img src="<?php echo site_url( '/wp-content/uploads/mien-phi-4.png', null ); ?>" /></center></div></div>
+     </div>
+     <div class="margin-top-5 relative">            
+        <?php if(is_active_sidebar('slideshow-widget')):?>
+            <?php dynamic_sidebar('slideshow-widget')?>
+        <?php endif; ?>    
+        <div class="container news-absolute">          
+                <?php if(is_active_sidebar('thiet-bi-ve-sinh-widget')):?>
+                    <?php dynamic_sidebar('thiet-bi-ve-sinh-widget')?>
+                <?php endif; ?>            
+        </div>            
     </div>
     <?php if(is_active_sidebar('tu-van-widget')):?>
         <?php dynamic_sidebar('tu-van-widget')?>
@@ -68,23 +77,8 @@ $pinterest_url=$zendvn_sp_settings['pinterest_url'];
                 <?php endif; ?>                    
             </div>                    
             <div class="clr"></div>   
-        </div>  
-        <div class="header-title">
-            <h4><span><font color="#3AB54A">Thiết bị</font></span> vệ sinh</h4>                          
-        </div>  
-        <div class="margin-top-15">
-            <?php if(is_active_sidebar('thiet-bi-ve-sinh-widget')):?>
-                <?php dynamic_sidebar('thiet-bi-ve-sinh-widget')?>
-            <?php endif; ?>  
-        </div>
-        <div class="header-title">
-            <h4><span><font color="#3AB54A">Thiết bị</font></span> bếp</h4>                          
-        </div>  
-        <div class="margin-top-15">
-            <?php if(is_active_sidebar('thiet-bi-bep-widget')):?>
-                <?php dynamic_sidebar('thiet-bi-bep-widget')?>
-            <?php endif; ?>  
-        </div>
+        </div>          
+        
     </div>    
     <div class="register-mail-bg margin-top-15">
         <div class="container">            
@@ -105,18 +99,6 @@ $pinterest_url=$zendvn_sp_settings['pinterest_url'];
             </div>
             <div class="clr"></div>
         </div>
-    </div> 
-    <div class="cleverhouse padding-bottom-15">
-        <div class="container">
-            <div class="header-title">
-                <h4><span><font color="#3AB54A">Nhà</font></span> thông minh</h4>                          
-            </div>  
-            <div class="margin-top-15">
-                <?php if(is_active_sidebar('clever-house-widget')):?>
-                    <?php dynamic_sidebar('clever-house-widget')?>
-                <?php endif; ?>  
-            </div>
-        </div>   
     </div>     
     <?php if(is_active_sidebar('customer-widget')):?>
                     <?php dynamic_sidebar('customer-widget')?>

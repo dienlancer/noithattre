@@ -203,8 +203,8 @@ div.topbar{
     padding: 38px 0px
 }
 div.bg-header{
-    background:#F6F6F6;    
-    padding: 10px 0px
+        background: #ffffff;
+    padding: 10px 0px;
 }
 .box-search input {
     height: 40px;
@@ -282,7 +282,7 @@ div.product-slider div.owl-item:first-child > div > div.box-product{
      border-left: 1px solid #dddddd;
 }
 div.box-product-title{
-    text-align: center;
+    
 
 }
 div.box-product-price{
@@ -338,9 +338,8 @@ div.owl-carousel-product-sale-featured > div > div  > div:first-child{
     border-left: 1px solid #dddddd;
 }
 div.box-product{
-    background: #ffffff;
-    border: 1px solid #dddddd;
-    padding-bottom: 20px;
+ 
+  padding: 0px 15px;
 }
 div.tabcontent div.box-product{
     border-bottom: 1px solid #dddddd;
@@ -380,7 +379,7 @@ span.remain-icon > i {
     margin-right: 12px;
 }
 div.product-img{
-        padding: 0px 10px;
+        
     margin: auto;
     position: relative;
 }
@@ -554,6 +553,9 @@ h4.single-excerpt{
     font-weight: bold;
     font-size: 14px;
 }
+div.excerpt{
+    text-align: justify;
+}
 div.box-article {
     margin-top: 15px;
 }
@@ -657,6 +659,24 @@ div.product-detail > div {
 div.product-hotline {
     font-size: 16px;
     font-weight: bold;
+}
+div.hotline{
+   background-image: url(../images/bg_hot_sup.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    height: 44px;
+    padding-left: 50px;
+    color: #017360;
+    font-family: "baomoi";
+}
+div.hotline > span{
+    display: block;
+}
+div.hotline > span:first-child{
+        font-size: 14px;
+}
+div.main-menu-wrapper{
+    background: #05715f
 }
 span.sale-title {
     font-weight: bold;
@@ -859,9 +879,10 @@ div.product-sale-shop > div:nth-child(4){
     margin-top: 0 ;
 }
 div.box-product-title > a{
-    font-family: 'baomoi';
+        font-family: 'baomoi';
     font-weight: bold;
     font-size: 14px;
+    text-transform: uppercase;
 }
 div.box-product-general-price{
     font-family: 'baomoi';    
@@ -1048,6 +1069,55 @@ div.box-footer > div {
 div.warasocial{
     width: 166px;
     margin: auto;    
+}
+div.top-menu-wrapper{
+    float: right;
+}
+ul.topmenu{
+    list-style: none;
+}
+ul.topmenu > li{
+    float: left;
+    margin-left: 0
+}
+ul.topmenu > li > a{
+    display: block;
+    padding:8px 10px;
+    background: #ECECEC;
+    border-left: solid 1px #dadada;
+    border-bottom: solid 1px #dadada;
+}
+ul.topmenu > li:last-child > a{
+    border-right: solid 1px #dadada;
+}
+div.free-coffee > div > div{
+    border-left:solid 1px #d7d7d7;
+    border-top:solid 1px #d7d7d7;
+    border-bottom:solid 1px #d7d7d7;
+}
+div.free-coffee > div:last-child > div{
+    border-right:solid 1px #d7d7d7;
+} 
+div.news-absolute{
+        position: absolute;
+    bottom: -246px;
+    left: 90px;
+    z-index: 999999;
+    background: #EDEDED;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+div.readmore-left > a{
+    display: block;
+    background: #05715f;
+    float: left;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 7px 8px;
+}
+div.readmore-left > a:hover{
+    background: #0c7c69;
 }
 @media (max-width: 1199px){
     div.phone-number > div{
