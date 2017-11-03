@@ -127,14 +127,14 @@ div.mobile-search{
     }
 }
 .navbar-default {    
-    background: #3AB54A;
+    background: #05715f;
     border: 0;
 }
 .navbar-default .navbar-toggle{
     border: 1px solid #ffffff
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
-     background:#3AB54A;
+     background:#05715f;
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
@@ -157,7 +157,7 @@ ul.navbar-nav > li:first-child > a{
     border: 0
 }
 .navbar-default .navbar-nav > li > a{
-   border-top: 1px solid #47cb58;
+   border-top: solid 1px #288575;
 }
 .navbar-default .navbar-nav > li  a:hover{
     color: #D41010;    
@@ -1160,6 +1160,9 @@ div.gechome{
     background: #EDEDED;
     padding: 10px
 }
+div.featured-instruction{
+    display: none;
+}
 @media (max-width: 1199px){
     div.phone-number > div{
         display: none;
@@ -1233,6 +1236,23 @@ div.gechome{
     }
     div.bg-header {    
         padding: 2px 0px;
+    }
+    div.news-absolute{
+        position: relative;
+        bottom: 0;
+        left 0;
+        width: 100%;
+        display: none;
+    }
+    div.featured-img-absolute{
+        display: none;
+    }
+    div.featured-article{
+        margin-top: 0
+    }
+    div.amazon{
+        padding: 0;
+        min-height: auto        
     }
 }
 

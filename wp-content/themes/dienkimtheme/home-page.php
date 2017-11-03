@@ -41,7 +41,7 @@ $pinterest_url=$zendvn_sp_settings['pinterest_url'];
         <?php dynamic_sidebar('featured-article-widget')?>
         <?php endif; ?>    
     </div>    
-    <div class="container main margin-top-15">
+    <div class="container main featured-instruction margin-top-15">
         <h2 class="title-box-news"><a class="text-title-box" title="" href="/cong-trinh-tieu-bieu/">Công trình tiêu biểu</a></h2>     
         <div class="margin-top-15 product-kemma">            
             <script type="text/javascript" language="javascript">
