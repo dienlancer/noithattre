@@ -28,7 +28,9 @@ class PageMetabox{
 		$inputID = $this->create_id("intro");
 		$inputName = $this->create_id("intro");
 		$inputValue = get_post_meta($post->ID,$this->create_key("intro"),true);		
-		$html		='<div><b>Giới thiệu</b></div><div>'.$vHtml->cmsTextarea($inputID,$inputName,"widefat",$inputValue,8,120).'</div>' ;
+		$html		='<div><b>Giới thiệu</b></div><div>'.$vHtml->cmsTextarea($inputID,$inputName,"widefat",$inputValue,8,120).'</div><script type="text/javascript" language="javascript">
+		CKEDITOR.replace("'.$inputID.'");
+		</script>' ;
 		echo $html;			
 	}
 	public function save($post_id){

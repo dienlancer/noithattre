@@ -36,9 +36,11 @@ $pinterest_url=$zendvn_sp_settings['pinterest_url'];
                 <?php endif; ?>            
         </div>            
     </div>
-    <?php if(is_active_sidebar('tu-van-widget')):?>
-        <?php dynamic_sidebar('tu-van-widget')?>
-    <?php endif; ?>    
+    <div class="container featured-article">
+        <?php if(is_active_sidebar('featured-article-widget')):?>
+        <?php dynamic_sidebar('featured-article-widget')?>
+        <?php endif; ?>    
+    </div>    
     <div class="container main">
         <div class="header-title">
             <h4><span><font color="#3AB54A">Danh mục</font></span> sản phẩm</h4>               

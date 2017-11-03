@@ -20,7 +20,36 @@ if(!empty($instance['item_id'])){
 	if(count($arrItemID) > 0){
 		if($instance["status"]=='active'){		
 			switch ($instance["position"]) {				
-				case "hot-news-widget":	
+				case "featured-article-widget":					
+				$args = array(
+					'post__in' => $arrItemID,
+					'post_type' => 'page'
+				);			 
+				$query = new WP_Query($args);		
+				if($query->have_posts()){
+					$k=1;
+                	$post_count=$query->post_count;
+					while ($query->have_posts()) {
+						$query->the_post();		
+						$post_id=$query->post->ID;							
+						$permalink=get_the_permalink($post_id);
+						$title=get_the_title($post_id);
+						$excerpt=get_post_meta($post_id,$page_meta_key."intro",true);
+						$featureImg=wp_get_attachment_url(get_post_thumbnail_id($post_id));		   
+						$featureImg=$vHtml->getFileName($featureImg);
+						$featureImg=site_url('/wp-content/uploads/'.$featureImg ,null );  
+						?>
+						<div class="relative amazon">
+							<h3 class="featured-title"><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></h3>
+							<div class="margin-top-15"><?php echo $excerpt; ?></div>
+							<div class="featured-img-absolute"><img src="<?php echo $featureImg; ?>" /></div>							
+						</div>														
+						<?php						
+					}
+					wp_reset_postdata();  
+				}
+				break;				
+				case "hot-news-widget":					
 				$args = array(
 					'post__in' => $arrItemID,
 					'post_type' => 'post'

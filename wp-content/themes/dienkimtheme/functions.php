@@ -68,6 +68,15 @@ function zendvn_theme_widgets_init(){
 		'after_widget'  => '</div>'				
 	));
 	register_sidebar(array(
+		'name'          => __( 'FeaturedArticleWidget', $themeName ),
+		'id'            => 'featured-article-widget',		
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+		'after_widget'  => '</div>'				
+	));
+	register_sidebar(array(
 		'name'          => __( 'SaleProductWidget', $themeName ),
 		'id'            => 'sale-product-widget',		
 		'class'         => '',
@@ -111,16 +120,7 @@ function zendvn_theme_widgets_init(){
 		'before_title'  => '<h3 class="footer-title h-title">',
 		'after_title'   => '</h3>',
 		'after_widget'  => '</div>'				
-	));
-	register_sidebar(array(
-		'name'          => __( 'FeaturedArticleWidget', $themeName ),
-		'id'            => 'featured-article-widget',		
-		'class'         => '',
-		'before_widget' => '<div id="%1$s" class="%2$s">',
-		'before_title'  => '<h6>',
-		'after_title'   => '</h6>',
-		'after_widget'  => '</div>'				
-	));
+	));	
 	register_sidebar(array(
 		'name'          => __( 'ContactOrderWidget', $themeName ),
 		'id'            => 'contact-order-widget',		
