@@ -2,6 +2,8 @@
 	/*
 	 Template Name: HomePage
 	 */	 
+     error_reporting(E_ALL);
+ini_set('display_errors', 1);
      global $zendvn_sp_settings;
      $contacted_phone=$zendvn_sp_settings['contacted_phone'];
 $email_to=$zendvn_sp_settings['email_to'];
